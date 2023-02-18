@@ -1,40 +1,203 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{% block head_title %}{% endblock %}</title>
-    {% block extra_head %}
-    {% endblock %}
-  </head>
-  <body>
-    {% block body %}
+{% load static %}
 
-    {% if messages %}
-    <div>
-      <strong>Messages:</strong>
-      <ul>
-        {% for message in messages %}
-        <li>{{message}}</li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
+<!doctype html>
+<html lang="en">
 
-    <div>
-      <strong>Menu:</strong>
-      <ul>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
-        {% else %}
-        <li><a href="{% url 'account_login' %}">Sign In</a></li>
-        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-        {% endif %}
-      </ul>
+<head>
+
+  {% block meta %}
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="description" content="PONIGYM Template">
+  <meta name="keywords" content="PONIGYM, unica, creative, html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PONIGYM</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+  <!-- Css Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+  <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+  <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  {% endblock %}
+
+  {% block extra_meta %}
+  {% endblock %}
+
+  {% block corecss %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  {% endblock %}
+
+  {% block extra_css %}
+  {% endblock %}
+
+  {% block corejs %}
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  {% endblock %}
+
+  {% block extra_js %}
+  {% endblock %}
+
+  <title>{% block extra_title %}{% endblock %}</title>
+
+</head>
+
+<body>
+  <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
     </div>
-    {% block content %}
-    {% endblock %}
-    {% endblock %}
-    {% block extra_body %}
-    {% endblock %}
-  </body>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+      <div class="container">
+        <div class="logo">
+          <a href="{% url 'home' %}">
+            <img src="{% static 'logo.png' %}" alt="gym logo">
+          </a>
+        </div>
+
+      </div>
+
+
+
+        <div class="nav-menu">
+           <nav class="mainmenu mobile-menu">
+             <ul>
+               <li class="active"><a href="./index.html">Home</a></li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">Schedule</a></li>
+               <li><a href="#">Trainers</a></li>
+               <li><a href="#">My Account</a>
+                 <ul class="dropdown">
+                  <li><a href="#">MenuItem</a></li>
+                  <li><a href="#">MenuItem</a></li>
+                  <li><a href="#">MenuItem</a></li>
+                  <li><a href="#">MenuItem</a></li>
+                 </ul>
+               </li>
+               <li><a href="#">Contacts</a></li>
+             </ul>
+           </nav>
+           <div class="nav-right search-switch">
+             <i class="ti-search"></i>
+           </div>
+         </div>
+         <div id="mobile-menu-wrap"></div>
+       </div>
+     </header>
+     <!-- Header End -->
+  </header>
+
+  {% if messages %}
+  <div class="message-container"></div>
+  {% endif %}
+
+  {% block page_header %}
+  {% endblock %}
+
+  {% block content %}
+  {% endblock %}
+
+  <!-- Footer Section Begin -->
+  <footer class="footer-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="map-location">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8439.117808269453!2d-9.042806872988354!3d53.28401661067136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485b96c128b9d1a1%3A0xfa8c1ad2013cb64a!2sTown%20Park%20Centre%2C%20Tuam%20Rd%2C%20Galway!5e0!3m2!1sen!2sie!4v1676728601364!5m2!1sen!2sie"
+                 style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-widget">
+              <i class="fa fa-map-marker"></i>
+              <div class="map-address">
+                <img src="img/map-location.jpg" alt="">
+                <ul class="map-text">
+                  <li><span>Address:</span> Town Park Centre, Tuam Rd, Galway</li>
+                  <li><span>Phone:</span> 12-345-6789</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="footer-form set-bg" data-setbg="img/contact-form-bg.jpg">
+            <div class="row">
+              <div class="col-lg-10">
+                <div class="section-title">
+                  <h2>Request A Call Back</h2>
+                  <p>Shape your body and burn fat with strength training. With the right equipment
+                    such as free weights or resistance machines.</p>
+                </div>
+                <form action="#">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <input type="text" placeholder="Name">
+                    </div>
+                    <div class="col-lg-6">
+                      <input type="text" placeholder="Email">
+                    </div>
+                    <div class="col-lg-12">
+                      <input type="text" placeholder="Subject">
+                      <textarea placeholder="Message"></textarea>
+                      <button type="submit">Submit <i class="ti-angle-double-right"></i></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="register">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="copyright">
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+              Copyright &copy;<script>
+                document.write(new Date().getFullYear());
+              </script> All rights reserved | This template is made with <i class="fa fa-heart-o"
+                aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>-->
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+           
+            <div class="footer-links">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer Section End -->
+
+  {% block postloadjs %}
+  {% endblock %}
+
+
+</body>
+
 </html>
