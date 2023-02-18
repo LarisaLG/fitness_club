@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% load compress %}
+{% compress css %}
+<link type="text/x-scss" href="{% static 'css/style.scss' %}" rel="stylesheet" media="screen">
+{% endcompress %}
+
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -9,7 +15,8 @@
          <!-- Hero Section Begin -->
          <section class="hero-section">
              <div class="hero-items owl-carousel">
-                 <div class="single-hero-item set-bg" data-setbg="media/slider-bg-1.jpg">
+                <!-- <img src="{% static 'media/slider-bg-2.jpg' %}"> -->
+                 <div class="single-hero-item set-bg" data-setbg="{% static 'media/slider-bg-2.jpg' %}">
                      <div class="container">
                          <div class="hero-text">
                              <h4>Elite Personal Training Services</h4>
@@ -41,23 +48,9 @@
          <!-- Hero Section End -->
     </div>
 </div>
-
 {% endblock %}
 
+
 {% block content %}
-<!-- <div class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
-            <h1 class="display-4 logo-font text-black">
-                The new collections are here
-            </h1>
-            <div class="my-5">
-                <h4>
-                    <a href="#" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop
-                        Now</a>
-                </h4>
-            </div>
-        </div>
-    </div>
-</div> -->
+
 {% endblock %}

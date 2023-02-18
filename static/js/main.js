@@ -1,12 +1,3 @@
-/*  ---------------------------------------------------
-    Theme Name: PONIGYM
-    Description:
-    Author:
-    Author URI:
-    Version: 1.0
-    Created:
----------------------------------------------------------  */
-
 'use strict';
 
 (function ($) {
@@ -25,6 +16,12 @@
             var containerEl = document.querySelector('.gallery-filter');
             var mixer = mixitup(containerEl);
         }
+
+         $('.set-bg').each(function () {
+             var bg = $(this).data('setbg');
+             $(this).css('background-image', 'url(' + bg + ')');
+         });
+
     });
 
     /*------------------
