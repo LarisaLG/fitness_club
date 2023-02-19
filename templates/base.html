@@ -1,5 +1,6 @@
 {% load static %}
 
+<!-- load and compress scss file -->
 {% load compress %}
 {% compress css %}
 <link type="text/x-scss" href="{% static 'css/style.scss' %}" rel="stylesheet" media="screen">
@@ -16,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta charset="UTF-8">
   <meta name="description" content="PONIGYM ">
-  <meta name="keywords" content="PONIGYM, unica, creative, html">
+  <meta name="keywords" content="PONIGYM, gym, fitness, bodybuilding, workout">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PONIGYM</title>
@@ -70,11 +71,11 @@
 <body>
   
   <!-- Header Section Begin -->
-  <header class="header-section">
+  <header class="header-section header-normal">
     <div class="container">
       <div class="logo">
         <a href="{% url 'index' %}">
-          <img src="{% static 'media/logo.png' %}" alt="gym logo">
+          <img src="{% static 'media/logo-normal.png' %}" alt="gym logo">
         </a>
       </div>
     </div>
@@ -86,20 +87,17 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Schedule</a></li>
           <li><a href="#">Trainers</a></li>
+          <li><a href="#">Contacts</a></li>
           <li><a href="#">My Account</a>
             <ul class="dropdown">
-              <li><a href="#">MenuItem</a></li>
-              <li><a href="#">MenuItem</a></li>
-              <li><a href="#">MenuItem</a></li>
-              <li><a href="#">MenuItem</a></li>
+              <li><a href="#">Sign Up</a></li>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Logout</a></li>
             </ul>
           </li>
-          <li><a href="#">Contacts</a></li>
         </ul>
-        </nav>
-        <!-- <div class="nav-right search-switch">
-          <i class="ti-search"></i>
-        </div> -->
+      </nav>
     </div>
     <div id="mobile-menu-wrap"></div>
     </div>
