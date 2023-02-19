@@ -1,5 +1,9 @@
 {% load static %}
 
+{% load compress %}
+{% compress css %}
+<link type="text/x-scss" href="{% static 'css/style.scss' %}" rel="stylesheet" media="screen">
+{% endcompress %}
 
 <!doctype html>
 <html lang="en">
@@ -39,9 +43,11 @@
   <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
   <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}" type="text/css">
   <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}" type="text/css">
   <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
   <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
   <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+
   {% endblock %}
 
   {% block corejs %}
@@ -56,17 +62,7 @@
   </script>
   {% endblock %}
 
-  {% block extra_js %}
-  <!-- Js Plugins -->
-  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-  <script src="{% static 'js/bootstrap.min.js' %}"></script>
-  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-  <script src="{% static 'js/mixitup.min.js' %}"></script>
-  <script src="{% static 'js/jquery.slicknav.js' %}"></script>
-  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-  <script src="{% static 'js/main.js' %}"></script>
-  {% endblock %}
-
+ 
   <title>{% block extra_title %}{% endblock %}</title>
 
 </head>
@@ -101,9 +97,9 @@
           <li><a href="#">Contacts</a></li>
         </ul>
         </nav>
-        <div class="nav-right search-switch">
+        <!-- <div class="nav-right search-switch">
           <i class="ti-search"></i>
-        </div>
+        </div> -->
     </div>
     <div id="mobile-menu-wrap"></div>
     </div>
@@ -156,7 +152,37 @@
   {% endblock %}
 
 
+ {% block extra_js %}
+ <!-- Js Plugins -->
+ <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+ <script src="{% static 'js/bootstrap.min.js' %}"></script>
+ <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+ <script src="{% static 'js/mixitup.min.js' %}"></script>
+ <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+ <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+ <script src="{% static 'js/main.js' %}"></script>
+ {% endblock %}
+
   {% block postloadjs %}
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin: 20,
+      nav:true,
+      singleItem : true,
+      responsive:{
+        0:{
+          items:1
+        },
+        600:{
+          items:1
+        },
+        1000:{
+          items:1
+        }
+      }
+    })
+  </script>
   {% endblock %}
 
 
