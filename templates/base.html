@@ -1,10 +1,5 @@
 {% load static %}
 
-<!-- load and compress scss file -->
-{% load compress %}
-{% compress css %}
-<link type="text/x-scss" href="{% static 'css/style.scss' %}" rel="stylesheet" media="screen">
-{% endcompress %}
 
 <!doctype html>
 <html lang="en">
@@ -15,7 +10,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta charset="UTF-8">
   <meta name="description" content="PONIGYM ">
   <meta name="keywords" content="PONIGYM, gym, fitness, bodybuilding, workout">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,10 +25,17 @@
   {% block corecss %}
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  
   {% endblock %}
 
   {% block extra_css %}
+<!-- load and compress scss file -->
+{% load compress %}
+{% compress css %}
+<link type="text/x-scss" href="{% static 'css/style.scss' %}" rel="stylesheet" media="screen">
+{% endcompress %}
+
+
+
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
@@ -64,8 +65,6 @@
     <script src="https://use.fontawesome.com/cb20fb1d61.js"></script>
   {% endblock %}
 
- 
-  <title>{% block extra_title %}{% endblock %}</title>
 
 </head>
 
@@ -101,7 +100,6 @@
       </nav>
     </div>
     <div id="mobile-menu-wrap"></div>
-    </div>
   </header>
   <!-- Header End -->
  
