@@ -65,6 +65,7 @@
     <script src="https://use.fontawesome.com/cb20fb1d61.js"></script>
   {% endblock %}
 
+<title>PONIGYM{% block extra_title %}{% endblock %}</title>
 
 </head>
 
@@ -84,16 +85,19 @@
       <nav class="mainmenu mobile-menu">
         <ul>
           <li class="active"><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="#">Schedule</a></li>
-          <li><a href="#">Trainers</a></li>
+          <li><a href="#">Memberships</a></li>
           <li><a href="#">Contacts</a></li>
           <li><a href="#">My Account</a>
             <ul class="dropdown">
-              <li><a href="#">Sign Up</a></li>
-              <li><a href="#">Login</a></li>
+              {% if request.user.is_authenticated %}
               <li><a href="#">Profile</a></li>
-              <li><a href="#">Logout</a></li>
+              <li><a href="{% url 'account_logout' %}">Logout</a></li>
+              {% else %}
+              <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+              <li><a href="{% url 'account_login' %}">Login</a></li>
+              {% endif %}
             </ul>
           </li>
         </ul>
