@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     'home',
     'compressor',
+    'memberships'
 ]
 
 MIDDLEWARE = [
