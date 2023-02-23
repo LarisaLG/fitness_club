@@ -12,7 +12,9 @@ class PackageAdmin(admin.ModelAdmin):
 
 
 class PackDetailAdmin(admin.ModelAdmin):
-    list_display = ('title', 'package')
+    list_display = ('title', 'package', 'included')
+
+    list_filter = ('package',)
 
     class Meta:
         ordering = ['title', 'package']

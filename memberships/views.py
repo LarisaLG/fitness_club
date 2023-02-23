@@ -9,7 +9,9 @@ def package_price(request):
     This view renders to the user the packages prices page.
     """
     package_price = Package.objects.all()
+    pack_details = PackDetail.objects.all()
     context = {
-        'package_price': package_price
+        'packages': package_price,
+        'pack_details': pack_details
         }
     return render(request, 'memberships/packages.html', context)

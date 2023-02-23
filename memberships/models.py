@@ -24,7 +24,8 @@ class Package(models.Model):
 # Package details
 
 class PackDetail(models.Model):
-    package = models.ForeignKey(Package, on_delete=models.CASCADE)
+    package = models.ForeignKey(Package, related_name='Classes',
+                                on_delete=models.CASCADE)
     title = models.CharField(max_length=150)
     included = models.BooleanField(default=False)
 

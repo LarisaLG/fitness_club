@@ -19,29 +19,29 @@
 
 <section class="section pricing spad">
     <div class="row justify-content-center">
-        {% for pack in package_price %}
+        {% for package in packages %}
         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            
             <div class="card rounded-0 border-danger px-4 py-5 ">
-                
-                <h4 class="card-title text-capitalize font-weight-normal font-secondary">{{pack.title}}</h4>
+                <h4 class="card-title text-capitalize font-weight-normal font-secondary">{{package.title}}</h4>
                 <h3 class="text-lg font-secondary position-relative mt-2">
-                    <span>€ {{pack.price}} per month</span>
-                
+                    <span>€ {{package.price}} per month</span>
                 </h3>
                 
                 <div class="card-body mt-2">
                     <ul class="list-unstyled lh-35 mb-4">
-                        <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Training
-                            overview</li>
-                        <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Foundation
-                            Training</li>
-                        <li><i class="ti-close mr-3"></i>Begineers Classes</li>
-                        <li><i class="ti-close mr-3"></i>Olympic weighlifting</li>
-                        <li><i class="ti-close mr-3"></i>Personal Training</li>
+                        {% for item in package.Classes.all %}
+                            {% if item.included %}
+                        <li class="text-black font-weight-bold">
+                            <i class="ti-check mr-3 text-color "></i> {{item.title}}
+                            {% else %}
+                            <li ><i class="ti-close mr-3"></i>
+                            {{item.title}}</li>
+                            {% endif %}
+                        {% endfor %}
+              
                     </ul>
                      
-                    <a href="#" class="btn class primary-btn btn-solid-border text-black">Buy Now</a>
+                    <a href="#" class="btn class primary-btn btn-solid-border text-black mt-2">Buy Now</a>
                 </div>
               
             </div>
