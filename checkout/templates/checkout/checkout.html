@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<main>
+<!-- Section checkout start -->
+
+<section class="breadcrumb-section set-bg" data-setbg="{% static 'media/about-breadcrumb-bg.jpg' %}">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="site-text ">
+                    <h2>Checkout</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section container my-4 spad">
+    <div class="row justify-content-center">
+    <table class="table table-bordered col-lg-6 col-sm-6">
+        <thead class="table-warning">
+            <tr>
+                <th>Plan</th>
+                <th>Plan Detail</th>
+                <th>Payment For</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <table class="table-bordered table">
+                        <tr>
+                            <th>Name</th>
+                            <td>{{pack.title}}</td>
+                        </tr>
+                        <tr>
+                            <th>Price</th>
+                            <td>€ {{pack.price}}</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <ul class="list-unstyled">
+                    
+                        <li>Feature title </li>
+                       
+                    </ul>
+                </td>
+                <td>
+                    <table class="table table-bordered">
+                       
+                        <tr>
+                            <td><input type="radio"/></td>
+                            <th><label for=""> Month</label></th>
+                            <td></td>
+                        </tr>
+                        
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot class="table-info">
+            <tr>
+                <td></td>
+                <th>Total Amount</th>
+                <td><b>€<span class="totalAmount">29</span></b></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td>
+                    <form method="post" action="">
+                        
+                        <input type="submit" value="Proceed to Payment" class="btn btn-primary" />
+                    </form>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+</section>
+
+
+
+    </div>
+
+<!-- Section checkout End -->
+
+
+{% endblock %}
