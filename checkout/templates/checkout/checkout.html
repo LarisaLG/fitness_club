@@ -57,7 +57,8 @@
                 <td><b>€<span class="totalAmount">{{package.price}}</span></b></td>
             </tr>
             <tr>
-                <td></td>
+                <td><a href="{% url 'packages' %}"
+                        class="btn class primary-btn btn-solid-border text-black">Choose another</a></td>
                 <td colspan="2">
                     <form method="post" action="">
                         <input type="submit" value="Proceed to Payment" class="btn primary-btn" />
