@@ -47,7 +47,13 @@ INSTALLED_APPS = [
     'compressor',
     'memberships',
     'checkout',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -89,6 +95,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
