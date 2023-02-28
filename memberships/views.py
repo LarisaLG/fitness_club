@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Package, PackDetail
-
+from django.urls import reverse_lazy
+from django.views import generic
+from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
 
 
