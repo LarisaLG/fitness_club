@@ -50,7 +50,7 @@
 
     <div class="row justify-content-center">
     <div class="col-lg-6 col-sm-6">
-      <form class="login text-white" method="POST" action="{% url 'account_login' %}">
+      <form class="login text-light" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form | crispy }}
         {% if redirect_field_value %}
