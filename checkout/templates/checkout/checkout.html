@@ -60,7 +60,8 @@
                 <td><a href="{% url 'packages' %}"
                         class="btn class primary-btn btn-solid-border text-black">Choose another</a></td>
                 <td colspan="2">
-                    <form method="post" action="">
+                    <form method="post" action="{% url 'create_checkout_session' package.id %}">
+                        {% csrf_token %}
                         <input type="submit" value="Proceed to Payment" class="btn primary-btn" />
                     </form>
                 </td>
