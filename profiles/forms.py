@@ -1,0 +1,17 @@
+from django import forms
+from django.contrib.auth.models import User
+from django.forms import ModelForm
+from .models import Profile
+
+
+# User form
+class UserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ('username', 'email', 'first_name', 'last_name')
+
+
+class ProfileForm(ModelForm):
+    class Meta:
+        model = Profile
+        fields = ('mob_phone', 'avatar')
