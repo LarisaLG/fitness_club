@@ -14,7 +14,8 @@ class CustomSignupForm(SignupForm):
 
     class Meta:
         model = User
-        fields = ('first_name', 'lastst_name', 'username', 'email', 'password1', 'password2')
+        fields = ('first_name', 'last_name', 'username', 'email',
+                  'password1', 'password2')
 
     def save(self, request):
         user = super(CustomSignupForm, self).save(request)
