@@ -93,7 +93,7 @@
           <li><a href="#">My Account</a>
             <ul class="dropdown">
               {% if request.user.is_authenticated %}
-              <li><a href="#">Profile</a></li>
+              <li><a href="{% url 'profile' %}">Profile</a></li>
               <li><a href="{% url 'account_logout' %}">Logout</a></li>
               {% else %}
               <li><a href="{% url 'account_signup' %}">Sign Up</a></li>

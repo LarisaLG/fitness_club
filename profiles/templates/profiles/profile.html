@@ -4,27 +4,33 @@
 
 
 {% block content %}
-<div class="content-section">
-    .
-    <div class="media">
-        <img class="rounded-circle account-img" src="{{ profile.avatar.url }}">
-        <div class="media-body">
-            <h2 class="account-heading">{{ user.username }}</h2>
-            <!-- <p class="text-secondary">{{ user.email }}</p>
-            <p class="text-secondary">{{ profile.mob_phone }}</p> -->
+
+<div class="container-fluid bg-secondary">
+    <div class="row">
+        <div class="col-md-3 offset-md-3">
+            <div class="media">
+                <div class="media-body mx-auto d-block">
+                    <img class="rounded-circle mx-auto d-block mt-4" width="120"
+                        src="{% static 'media/default_avatar.png' %}">
+                    <h3 class="account-heading d-flex justify-content-around text-white">{{ user.username }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mt-4">        
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mt-4">Your profile data</legend>
+                        {{ user_form|crispy }}         
+                        {{ profile_form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn primary-btn" type="submit">Update</button>
+                </div>
+            </form>         
         </div>
     </div>
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Ваш профиль</legend>
-            {{ user_form|crispy }}
-            {{ profile_form|crispy }}
-        </fieldset>
-        <div class="form-group">
-            <button class="btn btn-outline-info" type="submit">Обновить</button>
-        </div>
-    </form>
 </div>
+
 
 {% endblock content %}

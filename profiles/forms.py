@@ -9,7 +9,7 @@ from allauth.account.forms import SignupForm
 class UserForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ('username', 'email', 'first_name', 'last_name')
+        fields = ('email', 'first_name', 'last_name')
 
 
 class ProfileForm(ModelForm):
