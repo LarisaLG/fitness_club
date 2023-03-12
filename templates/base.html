@@ -108,9 +108,20 @@
   </header>
   <!-- Header End -->
  
-  {% if messages %}
-  <div class="message-container"></div>
-  {% endif %}
+
+<!-- Messages for user actions -->
+<div class="message-container">
+  <div class="row">
+    <div class="d-flex justify-content-center align-items-center">
+      {% for message in messages %}
+      <div class="alert alert-dismissible fade show" id="msg" role="alert">
+        {{ message | safe }}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- End Messages section -->
 
   {% block page_header %}
   {% endblock %}
@@ -153,6 +164,16 @@
       }
     })
   </script>
+
+    <script>
+      // Scripts adapted from Code Institute provided code 
+      setTimeout(function () {
+        let messages = document.getElementById("msg");
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+      }, 2000);
+      $("#copyright").text(new Date().getFullYear());
+    </script>
   {% endblock %}
 
 

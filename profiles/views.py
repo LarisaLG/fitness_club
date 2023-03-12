@@ -3,15 +3,16 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .models import Profile
 from .forms import UserForm, ProfileForm
+from django.contrib import messages
 
 
 # Profile page
-
 @login_required
 def profile(request):
     if request.user.is_authenticated:
         user = request.user
-        """ Check if user has a Profile object """
+        """ Check if user has a Profile object
+        and creates profile  """
         try:
             profile = user.profile
         except Profile.DoesNotExist:
@@ -25,6 +26,8 @@ def profile(request):
                 if user_form.is_valid() and profile_form.is_valid():
                     user_form.save()
                     profile_form.save()
+                    messages.success(request,
+                                     f'Your profile successfully updated.')
                     return redirect('profile')
         else:
             user_form = UserForm(instance=user)
