@@ -5,7 +5,8 @@
 
 {% block content %}
 
-<div class="container-fluid bg-secondary">
+<!-- Section profile start -->
+<section class="container-fluid bg-secondary">
     <div class="row">
         <div class="col-md-3 offset-md-3">
             <div class="media">
@@ -24,13 +25,16 @@
                         {{ user_form|crispy }}         
                         {{ profile_form|crispy }}
                 </fieldset>
-                <div class="form-group">
-                    <button class="btn primary-btn" type="submit">Update</button>
+                <div class="form-group d-flex justify-content-between">
+                    <button class="btn primary-btn p-2" type="submit">Update info</button>
+                    <a href="{% url 'delete_account' %}" 
+                        class="btn btn-danger text-uppercase form-control-lg">Delete account</a>
                 </div>
             </form>         
         </div>
     </div>
-</div>
+</section>
+<!-- Section profile end -->
 
-
+{% include 'includes/footer-widget.html' %}
 {% endblock content %}
