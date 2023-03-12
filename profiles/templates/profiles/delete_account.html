@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Section for account deletion-->
+<section class="set-bg spad" data-setbg="{% static 'media/about-breadcrumb-bg.jpg' %}">
+    <div class="row">
+        <div class="col-md-6 col-lg-4 mx-auto">
+            <div class="card text-center">
+                    <h5 class="text-center mt-4">Are you sure you want to delete
+                        your account {{ profile.user.first_name }}?
+                    </h5>
+                    <p class="text-dark mt-2">Your account and all of your data will be deleted.</p>
+                    <p class="text-danger"><b>This cannot be undone</b>!</p>
+                    <div class="form-group">
+                        <form class="d-flex justify-content-around"  method="POST" action="">
+                            <a class="btn btn-success mb-2 mt-3" href="{% url 'profile' %}" role="button">
+                                Back to profile</a>
+                            {% csrf_token %}
+                            <button class="btn btn-danger mb-2 mt-3" type="submit">Delete</button>
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section for account deletion-->
+
+
+{% include 'includes/footer-widget.html' %}
+{% endblock %}

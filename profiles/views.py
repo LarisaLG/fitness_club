@@ -40,3 +40,26 @@ def profile(request):
             'profile': profile,
         }
     return render(request, 'profiles/profile.html', context)
+
+
+# Delete User Account
+@login_required
+def delete_account(request):
+    """Existing and authenticated user can delete their account"""
+
+    if request.user.is_authenticated:
+        profile = Profile.objects.get(id=request.user.profile.id)
+        user = request.user
+
+        # Check that user really wants to delete this route
+        if request.method == 'POST':
+            user.delete()
+            messages.success(request,
+                             ('Your profile has been successfully deleted!'))
+            return redirect('index')
+
+        context = {
+            'profile': profile,
+        }
+
+        return render(request, 'profiles/delete_account.html', context)
