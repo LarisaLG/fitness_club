@@ -7,8 +7,13 @@ from django.contrib import messages
 
 
 # Profile page
-@login_required
 def profile(request):
+    return render(request, 'profiles/profile.html')
+
+
+# Update Profile page
+@login_required
+def update_profile(request):
     if request.user.is_authenticated:
         user = request.user
         """ Check if user has a Profile object
@@ -39,7 +44,7 @@ def profile(request):
             'user': user,
             'profile': profile,
         }
-    return render(request, 'profiles/profile.html', context)
+    return render(request, 'profiles/update_profile.html', context)
 
 
 # Delete User Account
