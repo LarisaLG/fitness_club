@@ -12,7 +12,7 @@
             <div class="media">
                 <div class="media-body mx-auto d-block">
                     <img class="rounded-circle mx-auto d-block mt-4" width="120"
-                        src="{% static 'media/default_avatar.png' %}">
+                        src="{{ user.profile.avatar.url }}">
                     <h3 class="account-heading d-flex justify-content-around text-white">{{ user.username }}</h3>
                 </div>
             </div>
