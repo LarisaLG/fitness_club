@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
-{% load contact_tags %}
+
+
 
 {% block content %}
 <!-- Contact Section Begin -->
@@ -32,13 +33,13 @@
                 </div>
             </div>
         </div>
-        <div class="container bg-dark text-white">
+        <div class="col bg-dark text-white">
             <div class="contact-form">
                 <div class="section-title">
                     <h2>Leave message</h2>
                     <p>Our staff will call back later and answer your questions.</p>
                 </div>
-                <form action="{url 'contact'}" method="post">
+                <form action="{% url 'contact' %}" method="post">
                     {% csrf_token %}
                     {{ form }}
 
