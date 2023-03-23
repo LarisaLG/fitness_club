@@ -32,14 +32,14 @@
                                 <p>Shape your body and burn fat with strength training. With the right equipment
                                     such as free weights or resistance machines.</p>
                             </div>
-                            <form action="{% url 'index' %}" method="post">
+                            <form action="{% url 'contact' %}" method="post">
                                 {% csrf_token %}
                                 {% contact_form %}
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-lg-12">
                                         <button type="submit">Submit <i class="ti-angle-double-right"></i></button>
                                     </div>
-                                </div>
+                                </div> -->
                             </form>
                         </div>
                     </div>
