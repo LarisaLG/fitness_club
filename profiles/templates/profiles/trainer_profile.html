@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<!-- Section profile start -->
+<section class="container-fluid bg-secondary">
+    <div class="row">
+        <div class="col-md-3 offset-md-2">
+            <div class="media">
+                <div class="media-body mx-auto d-block">
+                    <img class="rounded-circle mx-auto d-block mt-4" width="120" src="{{ user.profile.avatar.url }}"
+                        alt="avatar image">
+                    <h3 class="account-heading d-flex justify-content-around text-white">{{ user.username }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mt-4">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row profile-data form-group">
+
+                    <table class="table table-borderless text-white">
+                        <tbody>
+                            <tr>
+                                <td>Name:</td>
+                                <td>{{ user.first_name }}</td>
+                            </tr>
+                            <tr>
+                                <td>Surname:</td>
+                                <td>{{ user.last_name }}</td>
+                            </tr>
+                            <tr>
+                                <td>E-mail</td>
+                                <td>{{ user.email }}</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile phone:</td>
+                                <td>{{ user.profile.mob_phone }}</td>
+                            </tr>
+                            <tr>
+                                <td>Specialization:</td>
+                                <td>{{ user.profile.mob_phone }}</td>
+                            </tr>
+                             <tr>
+                                <td>Available for personal trainings:</td>
+                                <td>{{ user.profile.mob_phone }}</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile phone:</td>
+                                <td>{{ user.profile.mob_phone }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="form-group d-flex justify-content-between">
+                    <a href="{% url 'update_profile' %}" class="btn primary-btn p-2">Update info</a>
+                    <a href="{% url 'delete_account' %}" class="btn btn-danger text-uppercase form-control-lg">Delete
+                        account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- Section profile end -->
+
+{% include 'includes/footer-widget.html' %}
+{% endblock content %}

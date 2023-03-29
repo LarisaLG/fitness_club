@@ -1,14 +1,26 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from .models import Profile
+from .models import Profile, Trainer
 from .forms import UserForm, ProfileForm
 from django.contrib import messages
 
 
-# Profile page
+# User profile page
+@login_required
 def profile(request):
     return render(request, 'profiles/profile.html')
+
+
+@login_required
+def profile(request):
+    user = request.user
+    try:
+        profile = Profile.objects.get(user=user)
+    except Profile.DoesNotExist:
+        profile = None
+
+    return render(request, 'profiles/profile.html', {'profile': profile})
 
 
 # Update Profile page
@@ -68,3 +80,16 @@ def delete_account(request):
         }
 
         return render(request, 'profiles/delete_account.html', context)
+
+
+# Trainer profile page
+@login_required
+def trainer_profile(request):
+    user = request.user
+    try:
+        trainer = Trainer.objects.get(user=user)
+    except Trainer.DoesNotExist:
+        trainer = None
+
+    return render(request, 'profiles/trainer_profile.html',
+                  {'trainer': trainer})
