@@ -85,20 +85,22 @@
         <ul>
           <li class="active"><a href="{% url 'index' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'schedule' %}">Schedule</a></li>
+          <li><a href="#">Schedule</a></li>
           <li><a href="{% url 'packages' %}">Memberships</a></li>
           <li><a href="{% url 'contact' %}">Contacts</a></li>
           <li><a href="#">My Account</a>
             <ul class="dropdown">
               {% if request.user.is_authenticated %}
+              {% if request.user.is_staff %}
+              <li><a href="{% url 'trainer_profile' %}">Trainer Profile</a></li>
+              {% else %}
               <li><a href="{% url 'profile' %}">Profile</a></li>
+              {% endif %}
               <li><a href="{% url 'account_logout' %}">Logout</a></li>
               {% else %}
               <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
               <li><a href="{% url 'account_login' %}">Login</a></li>
               {% endif %}
-            </ul>
-          </li>
         </ul>
       </nav>
     </div>

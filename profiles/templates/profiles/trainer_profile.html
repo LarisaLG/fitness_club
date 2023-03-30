@@ -11,9 +11,10 @@
         <div class="col-md-3 offset-md-2">
             <div class="media">
                 <div class="media-body mx-auto d-block">
-                    <img class="rounded-circle mx-auto d-block mt-4" width="120" src="{{ user.profile.avatar.url }}"
+                    <img class="rounded-circle mx-auto d-block mt-4" width="150"
+                        src="{{ trainer.profile_avatar.url }}" 
                         alt="avatar image">
-                    <h3 class="account-heading d-flex justify-content-around text-white">{{ user.username }}</h3>
+                    <h3 class="account-heading d-flex justify-content-around text-white">Trainer {{ user.username }}</h3>
                 </div>
             </div>
         </div>
@@ -38,25 +39,22 @@
                             </tr>
                             <tr>
                                 <td>Mobile phone:</td>
-                                <td>{{ user.profile.mob_phone }}</td>
+                                <td>{{ trainer.mob_phone }}</td>
                             </tr>
                             <tr>
                                 <td>Specialization:</td>
-                                <td>{{ user.profile.mob_phone }}</td>
+                                <td>{{ trainer.specialization  }}</td>
                             </tr>
                              <tr>
                                 <td>Available for personal trainings:</td>
-                                <td>{{ user.profile.mob_phone }}</td>
-                            </tr>
-                            <tr>
-                                <td>Mobile phone:</td>
-                                <td>{{ user.profile.mob_phone }}</td>
+                                <!-- apply filter to check tariner's avalability -->
+                                <td>{{ trainer.is_available |yesno:"Yes, No" }}</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="form-group d-flex justify-content-between">
-                    <a href="{% url 'update_profile' %}" class="btn primary-btn p-2">Update info</a>
+                    <a href="{% url 'update_trainer_profile' %}" class="btn primary-btn p-2">Update info</a>
                     <a href="{% url 'delete_account' %}" class="btn btn-danger text-uppercase form-control-lg">Delete
                         account</a>
                 </div>

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .models import Profile, Trainer
-from .forms import UserForm, ProfileForm
+from .forms import UserForm, ProfileForm, TrainerProfileForm
 from django.contrib import messages
 
 
@@ -12,18 +12,7 @@ def profile(request):
     return render(request, 'profiles/profile.html')
 
 
-@login_required
-def profile(request):
-    user = request.user
-    try:
-        profile = Profile.objects.get(user=user)
-    except Profile.DoesNotExist:
-        profile = None
-
-    return render(request, 'profiles/profile.html', {'profile': profile})
-
-
-# Update Profile page
+# Update user profile page
 @login_required
 def update_profile(request):
     if request.user.is_authenticated:
@@ -93,3 +82,39 @@ def trainer_profile(request):
 
     return render(request, 'profiles/trainer_profile.html',
                   {'trainer': trainer})
+
+
+# Update Trainer Profile page
+@login_required
+def update_trainer_profile(request):
+    if request.user.is_authenticated:
+        user = request.user
+        """ Check if user has a Trainer object
+        and creates profile  """
+        try:
+            trainer = user.trainer
+        except Trainer.DoesNotExist:
+            trainer = Trainer.objects.create(user=user)
+        if request.method == 'POST':
+            trainer = user.trainer
+            if request.method == 'POST':
+                user_form = UserForm(request.POST, instance=user)
+                trainer_form = TrainerProfileForm(request.POST, request.FILES,
+                                           instance=trainer)
+                if user_form.is_valid() and trainer_form.is_valid():
+                    user_form.save()
+                    trainer_form.save()
+                    messages.success(request,
+                                     f'Your profile successfully updated.')
+                    return redirect('trainer_profile')
+        else:
+            user_form = UserForm(instance=user)
+            trainer_form = TrainerProfileForm(instance=trainer)
+
+        context = {
+            'user_form': user_form,
+            'trainer_form': trainer_form,
+            'user': user,
+            'trainer': trainer,
+        }
+    return render(request, 'profiles/update_trainer_profile.html', context)

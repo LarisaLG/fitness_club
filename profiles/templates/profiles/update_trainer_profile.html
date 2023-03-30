@@ -12,7 +12,7 @@
             <div class="media">
                 <div class="media-body mx-auto d-block">
                     <img class="rounded-circle mx-auto d-block mt-4" width="120"
-                        src="{% static 'media/default_avatar.png' %}">
+                        src="{% static 'media/trainer_avatar.png' %}">
                     <h3 class="account-heading d-flex justify-content-around text-white">{{ user.username }}</h3>
                 </div>
             </div>
@@ -22,8 +22,8 @@
                 {% csrf_token %}
                 <fieldset class="form-group">
                     <legend class="border-bottom mt-4">Your profile data</legend>
-                    {{ user_form|crispy }}
-                    {{ profile_form|crispy }}
+                    <!-- {{ user_form|crispy }} -->
+                    {{ trainer_form|crispy }}
                 </fieldset>
                 <div class="form-group d-flex justify-content-between">
                     <button class="btn primary-btn p-2" type="submit">Submit</button>
