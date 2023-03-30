@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<!-- BLOCK PAGE HEADER -->
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+<!-- END OF BLOCK PAGE HEADER -->
+{% endblock %}
+
+{% block content %}
+<!-- Section Page  404 start -->
+ <section class="cta-section set-bg spad" data-setbg="img/cta-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Sorry, we can't find that page.</h2>
+						  <p class="h5">Continue to explore our site.</p>
+                    <a href="{% url 'index' %}" class="primary-btn">Back to Homepage</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Section Page  404 end -->
+{% include 'includes/footer-widget.html' %}
+{% endblock %}
