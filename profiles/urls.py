@@ -6,5 +6,8 @@ urlpatterns = [
     path('update_profile/', views.update_profile, name='update_profile'),
     path('delete_account/', views.delete_account, name='delete_account'),
     path('trainer_profile/', views.trainer_profile, name='trainer_profile'),
-    path('update_trainer_profile/', views.update_trainer_profile, name='update_trainer_profile'),
+    path('update_trainer_profile/', views.update_trainer_profile,
+         name='update_trainer_profile'),
+    path('delete_trainer_account/', views.delete_trainer_account,
+         name='delete_trainer_account'),
 ]

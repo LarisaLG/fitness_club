@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="col-md-4 mt-4">
-            <form method="POST" enctype="multipart/form-data">
+            <form method="POST" enctype="multipart/form-data" >
                 {% csrf_token %}
                 <div class="row profile-data form-group">
 
@@ -47,7 +47,7 @@
                             </tr>
                              <tr>
                                 <td>Available for personal trainings:</td>
-                                <!-- apply filter to check tariner's avalability -->
+                                <!-- apply filter to check trainer's avalability -->
                                 <td>{{ trainer.is_available |yesno:"Yes, No" }}</td>
                             </tr>
                         </tbody>
@@ -55,7 +55,8 @@
                 </div>
                 <div class="form-group d-flex justify-content-between">
                     <a href="{% url 'update_trainer_profile' %}" class="btn primary-btn p-2">Update info</a>
-                    <a href="{% url 'delete_account' %}" class="btn btn-danger text-uppercase form-control-lg">Delete
+                    <a href="{% url 'delete_trainer_account' %}"
+                        class="btn btn-danger text-uppercase form-control-lg">Delete
                         account</a>
                 </div>
             </form>

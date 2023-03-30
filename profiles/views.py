@@ -100,13 +100,13 @@ def update_trainer_profile(request):
             if request.method == 'POST':
                 user_form = UserForm(request.POST, instance=user)
                 trainer_form = TrainerProfileForm(request.POST, request.FILES,
-                                           instance=trainer)
+                                                  instance=trainer)
                 if user_form.is_valid() and trainer_form.is_valid():
                     user_form.save()
                     trainer_form.save()
                     messages.success(request,
                                      f'Your profile successfully updated.')
-                    return redirect('trainer_profile')
+                    return redirect('index')
         else:
             user_form = UserForm(instance=user)
             trainer_form = TrainerProfileForm(instance=trainer)
@@ -118,3 +118,16 @@ def update_trainer_profile(request):
             'trainer': trainer,
         }
     return render(request, 'profiles/update_trainer_profile.html', context)
+
+
+def delete_trainer_account(request):
+    if request.method == 'POST':
+        if request.user.is_superuser:
+            request.user.delete()
+            messages.success(request, 'Trainer account has been deleted.')
+            return redirect('index')
+        else:
+            messages.error(request,
+                           'Only an administrator can delete trainer account.')
+            return redirect('trainer_profile')
+    return render(request, 'profiles/delete_trainer_account.html')

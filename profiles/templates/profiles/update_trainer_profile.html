@@ -22,7 +22,7 @@
                 {% csrf_token %}
                 <fieldset class="form-group">
                     <legend class="border-bottom mt-4">Your profile data</legend>
-                    <!-- {{ user_form|crispy }} -->
+                    {{ user_form|crispy }}
                     {{ trainer_form|crispy }}
                 </fieldset>
                 <div class="form-group d-flex justify-content-between">
