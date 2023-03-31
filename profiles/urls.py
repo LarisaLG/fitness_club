@@ -10,4 +10,5 @@ urlpatterns = [
          name='update_trainer_profile'),
     path('delete_trainer_account/', views.delete_trainer_account,
          name='delete_trainer_account'),
+    path('', views.schedule, name='schedule'),
 ]

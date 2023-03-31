@@ -131,3 +131,8 @@ def delete_trainer_account(request):
                            'Only an administrator can delete trainer account.')
             return redirect('trainer_profile')
     return render(request, 'profiles/delete_trainer_account.html')
+
+
+# Schedule page
+def schedule(request):
+    return render(request, 'profiles/schedule.html')
