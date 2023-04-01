@@ -428,6 +428,59 @@ ol {
   line-height: 22px;
 }
 
+	.service-video {
+	  height: 636px;
+	}
+
+	.service-video .play-btn {
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex;
+	  height: 100%;
+	  width: 100%;
+	  -webkit-box-align: center;
+	  -ms-flex-align: center;
+	  align-items: center;
+	  -webkit-box-pack: center;
+	  -ms-flex-pack: center;
+	  justify-content: center;
+	}
+
+	.service-video .play-btn a {
+	  display: inline-block;
+	  position: relative;
+	  z-index: 1;
+	}
+
+	.service-video .play-btn a:before {
+	  position: absolute;
+	  left: -28px;
+	  top: -20px;
+	  height: 66px;
+	  width: 66px;
+	  background: #fff;
+	  content: "";
+	  border-radius: 50%;
+	  opacity: 0.2;
+	  z-index: -1;
+	}
+
+	.service-video .play-btn a:after {
+	  position: absolute;
+	  left: -20px;
+	  top: -12px;
+	  height: 50px;
+	  width: 50px;
+	  background: #f34e3a;
+	  content: "";
+	  border-radius: 50%;
+	  z-index: -1;
+	}
+
+	.service-video .play-btn a i {
+	  color: #ffffff;
+	}
+
 
 /*---------------------
   Cta Section
