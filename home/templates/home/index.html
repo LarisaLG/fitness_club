@@ -90,12 +90,14 @@
 <section class="cta-section set-bg spad" data-setbg="{% static 'media/cta-bg.jpg' %}">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 mb-4 pb-4">
                 <h2>Start your Journey with our exciting offers</h2>
                 <a href="{% url 'packages' %}" class="primary-btn">Join With Us</a>
             </div>
+
         </div>
     </div>
+     {% include 'includes/subscribe.html' %}
 </section>
 <!-- Cta Section End -->
 
