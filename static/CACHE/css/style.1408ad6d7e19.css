@@ -27,7 +27,7 @@ body {
   height: 100%;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
-   }
+  font-smoothing: antialiased; }
 
 /* line 38, static/css/style.scss */
 h1,
@@ -482,8 +482,8 @@ ol {
 
 /* line 529, static/css/style.scss */
 .single-hero-item {
-  height: 650px;
-  padding-top: 158px; }
+  height: 450px;
+  padding-top: 258px; }
   /* line 532, static/css/style.scss */
   .single-hero-item .hero-text {
     text-align: center; }
