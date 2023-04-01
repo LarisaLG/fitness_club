@@ -22,7 +22,7 @@ README Table Content
     - [**robots.txt**](#robotstxt)
 - [**Facebook Page**](#facebook-page)
 
-- [**Technologies**](#technologies)
+- [**Technologies used**](#technologies-used)
   - [**Languages**](#languages)
   - [**Frameworks and Libraries**](#frameworks)
   - [**Programs & Tools**](#programs-and-tools)
@@ -35,6 +35,20 @@ README Table Content
   - [**Inspiration**](#inspiration)
   - [**Acknowledgments**](#acknowledgments)
 
+
+
+
+# Project Introduction
+
+This is the project milestone 5 for Code Institute Full-stack development program: Software Development (E-commerce Applications) .
+PONIGYM is an  E-commerce application where users can find and buy желаемые services. 
+PONIGYM is a fictional fitness club. It is designed to be responsive and accessible on a variety of devices for the ease of use of the site by potential users.
+<!-- ![](static/assets/img/amiresponsive.png) -->
+
+
+The deployed [PONIGYM](https://fitclub.herokuapp.com/) app.
+
+The [GitHub repository](https://github.com/LarisaLG/fitness_club)
 
 
 
