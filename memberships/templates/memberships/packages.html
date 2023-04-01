@@ -25,10 +25,10 @@
         {% for package in packages %}
         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
             <div class="card rounded-1 border-danger px-4 py-5 ">
-                <h3 class="card-title text-capitalize font-weight-normal font-secondary">{{package.title}}</h4>
+                <h3 class="card-title text-capitalize font-weight-normal font-secondary">{{package.title}}</h3>
                     <h4 class="text-lg font-secondary position-relative mt-2">
                         <span>€ {{package.price}} per month</span>
-                </h3>
+                </h4>
                 <div class="card-body mt-2">
                     <ul class="list-unstyled lh-35 mb-4">
                         {% for item in package.Classes.all %}

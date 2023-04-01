@@ -1,12 +1,10 @@
 {% load static %}
 
-<form action="{url 'contact'}" method="post">
     {% csrf_token %}
-    {{ contact_form }}
+    {{ contact_form.as_p }}
 
     <div class="row">
         <div class="col-lg-12">
             <button type="submit">Submit <i class="ti-angle-double-right"></i></button>
         </div>
     </div>
-</form>
