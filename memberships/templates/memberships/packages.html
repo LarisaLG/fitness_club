@@ -34,7 +34,7 @@
                         {% for item in package.Classes.all %}
                             {% if item.included %}
                         <li class="text-black font-weight-bold">
-                            <i class="ti-check mr-3 text-color"></i> {{item.title}}
+                            <i class="ti-check mr-3 text-color"></i> {{item.title}}</li>
                             {% else %}
                         <li><i class="ti-close mr-3"></i>
                             {{item.title}}</li>
@@ -47,7 +47,6 @@
         </div>
         {% endfor %}
 
-    </div>
     </div>
 </section>
 <!-- Section pricing End -->
