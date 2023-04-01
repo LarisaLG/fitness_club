@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /profiles/
+sitemap: https://fitclub.herokuapp.com/sitemap.xml
