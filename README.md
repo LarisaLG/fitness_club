@@ -43,12 +43,46 @@ README Table Content
 This is the project milestone 5 for Code Institute Full-stack development program: Software Development (E-commerce Applications) .
 PONIGYM is an  E-commerce application where users can find and buy желаемые services. 
 PONIGYM is a fictional fitness club. It is designed to be responsive and accessible on a variety of devices for the ease of use of the site by potential users.
-<!-- ![](static/assets/img/amiresponsive.png) -->
+
+![](assets/amiresponsive.png)
 
 
 The deployed [PONIGYM](https://fitclub.herokuapp.com/) app.
 
 The [GitHub repository](https://github.com/LarisaLG/fitness_club)
+
+### UX (User Experience)
+### User Stories
+
+As a first time visitor
+
+As a first time visitor, I want:
+* to easily understand the main purpose of the site,
+* to be able to easily navigate throughout the site,
+* to register for an account to avail of the services offered to members,
+* to be able to log out of my user account.
+       
+As a website user, I can:
+
+* to navigate around the site and easily view the desired content,
+* to view a list of services and choose accordingly,
+* to buy a product by using the website checkout system,
+* to sign in to my user account,
+* to edit my account details or delete them,
+* to sign out of my account to keep my account safe.
+
+As a Site Administrator I would like to be able:
+* to create, view, edit and delete services data   
+* to create a new user, to delete user, to create and delete services,
+* to change a user’s permissions on the website
+
+### Agile tools
+
+The GitHub Projects section was used as a [Kanban board](https://github.com/users/LarisaLG/projects/18/views/1) for the development of this project, which made it possible to break down the project execution into subtasks and make it easier to complete and track project progress.
+[User stories](https://github.com/LarisaLG/fitness_club/issues) were used to break down the project into sub-tasks and placed on the Kanban board to work on them and track progress.
+
+[Back to the top](#table-of-contents)
+
 
 
 
