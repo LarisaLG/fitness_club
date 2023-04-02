@@ -4,7 +4,7 @@ README Table Content
 - [**UX (User Experience)**](#ux-user-experience)
   - [**User Stories**](#user-stories)
   - [**Agile Tools**](#agile-tools)
-
+- [**Design & Site architecture**](#design-and-architecture)
 - [**Features**](#features)
   - [**Navbar**](#navbar)
   - [**Footer**](#footer)
@@ -15,7 +15,6 @@ README Table Content
   - [**Contacts Page**](#contacts-page)
   - [**Login Page**](#login-page)
   - [**Logout Page**](#logout-page)
-
 - [**Stripe Payments**](#stripe-payments)
 - [**Search Engine Optimization**](#search-engine-optimization)
     - [**sitemap.xml**](#sitemapxml)
@@ -35,8 +34,7 @@ README Table Content
   - [**Inspiration**](#inspiration)
   - [**Acknowledgments**](#acknowledgments)
 
-
-
+*****
 
 # Project Introduction
 
@@ -54,9 +52,8 @@ The [GitHub repository](https://github.com/LarisaLG/fitness_club)
 ### UX (User Experience)
 ### User Stories
 
-As a first time visitor
-
 As a first time visitor, I want:
+
 * to easily understand the main purpose of the site,
 * to be able to easily navigate throughout the site,
 * to register for an account to avail of the services offered to members,
@@ -72,6 +69,7 @@ As a website user, I can:
 * to sign out of my account to keep my account safe.
 
 As a Site Administrator I would like to be able:
+
 * to create, view, edit and delete services data   
 * to create a new user, to delete user, to create and delete services,
 * to change a user’s permissions on the website
@@ -82,6 +80,72 @@ The GitHub Projects section was used as a [Kanban board](https://github.com/user
 [User stories](https://github.com/LarisaLG/fitness_club/issues) were used to break down the project into sub-tasks and placed on the Kanban board to work on them and track progress.
 
 [Back to the top](#table-of-contents)
+
+
+## Design and Site architecture
+
+The site is made using the [Colorlib](https://colorlib.com) template.
+Logo, images, color scheme, font for site were used from the specified template.
+
+### Site architecture
+PONIGYM diagram:
+![](assets/architecture.png)
+
+[Back to the top](#table-of-contents)
+
+## Features
+### Navbar
+The navigation bar is present on all pages of the site. The navigation bar changes depending on whether the user is the gym member or a trainer.
+Also, the navigation bar is an adaptive element, and on mobile screens it collapses into a hamburger block.
+![Navigation menu](assets/features/navbar.png)
+
+ ### Footer
+
+ On the website footer, users can see map and gym location information. Footer contains form to request call back. privacy policy,links to social media. Also footer includes links to informattion about Ponigym,privacy policy and links to social media.
+![Footer](assets/features/footer.png)
+
+### Landing Page
+The Home page works as a landing page, where the user sees background banner with a description of the services and the text of the slogan and call to action button.
+There are also sections with a brief description of programs and classes.
+![Landing](assets/features/landing.png)
+
+### About Page
+
+The About page contains a Welcome section and a section of Our Trainers.
+![About page](assets/features/about.png)
+
+### Schedule Page
+On the Schedule page, the user has access to the schedule of all classes or he can filter the classes by selecting them from the submenu.
+![Schedule page](assets/features/schedule.png)
+
+### Memberships Page
+On the Membership page, the user can see packages, package details, their cost and go to the checkout page.
+![Memberships page](assets/features/memberships.png)
+
+### Checkout Page
+On the Checkout page, the user can see the package he has chosen and the details of the package, and the total amount.
+Also, the User has 2 buttons available where he can go directly to payment or go back to select another service.
+![Checkout page](assets/features/checkout.png)
+
+### Contacts Page
+The contact page contains contact information, club opening hours and a contact form for feedback.
+![Contacts page](assets/features/contacts.png)
+
+### Sign Up Page
+The Sign Up page contains a form with fields for entering email, username,name, surname and password. For registered users there is a link to enter the account.
+![Sign Up page](assets/features/signup.png)
+
+
+### Login Page
+The Login page contains a form with fields for entering userneme or email, name, and password. For unregistered users, there is a link to register an account.
+![Login page](assets/features/login.png)
+
+### Logout Page
+Logout page: Logging out of the account is done through the menu, after which the user is redirected to the logout page where he must confirm his desire to log out of the account. After a successful logout, the user is returned to the home page and receives a message at the top of the screen.
+![Logout page](assets/features/logout.png)
+
+
+
 
 
 
