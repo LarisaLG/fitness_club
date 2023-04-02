@@ -16,11 +16,10 @@ README Table Content
   - [**Login Page**](#login-page)
   - [**Logout Page**](#logout-page)
 - [**Stripe Payments**](#stripe-payments)
-- [**Search Engine Optimization**](#search-engine-optimization)
+- [**Marketing and SEO**](#marketing-seo)
+- [**Facebook Page**](#facebook-page)
     - [**sitemap.xml**](#sitemapxml)
     - [**robots.txt**](#robotstxt)
-- [**Facebook Page**](#facebook-page)
-
 - [**Technologies used**](#technologies-used)
   - [**Languages**](#languages)
   - [**Frameworks and Libraries**](#frameworks)
@@ -104,6 +103,8 @@ Also, the navigation bar is an adaptive element, and on mobile screens it collap
  On the website footer, users can see map and gym location information. Footer contains form to request call back. privacy policy,links to social media. Also footer includes links to informattion about Ponigym,privacy policy and links to social media.
 ![Footer](assets/features/footer.png)
 
+[Back to the top](#table-of-contents)
+
 ### Landing Page
 The Home page works as a landing page, where the user sees background banner with a description of the services and the text of the slogan and call to action button.
 There are also sections with a brief description of programs and classes.
@@ -114,6 +115,8 @@ There are also sections with a brief description of programs and classes.
 The About page contains a Welcome section and a section of Our Trainers.
 ![About page](assets/features/about.png)
 
+[Back to the top](#table-of-contents)
+
 ### Schedule Page
 On the Schedule page, the user has access to the schedule of all classes or he can filter the classes by selecting them from the submenu.
 ![Schedule page](assets/features/schedule.png)
@@ -121,6 +124,8 @@ On the Schedule page, the user has access to the schedule of all classes or he c
 ### Memberships Page
 On the Membership page, the user can see packages, package details, their cost and go to the checkout page.
 ![Memberships page](assets/features/memberships.png)
+
+[Back to the top](#table-of-contents)
 
 ### Checkout Page
 On the Checkout page, the user can see the package he has chosen and the details of the package, and the total amount.
@@ -131,10 +136,11 @@ Also, the User has 2 buttons available where he can go directly to payment or go
 The contact page contains contact information, club opening hours and a contact form for feedback.
 ![Contacts page](assets/features/contacts.png)
 
+[Back to the top](#table-of-contents)
+
 ### Sign Up Page
 The Sign Up page contains a form with fields for entering email, username,name, surname and password. For registered users there is a link to enter the account.
 ![Sign Up page](assets/features/signup.png)
-
 
 ### Login Page
 The Login page contains a form with fields for entering userneme or email, name, and password. For unregistered users, there is a link to register an account.
@@ -145,10 +151,47 @@ Logout page: Logging out of the account is done through the menu, after which th
 ![Logout page](assets/features/logout.png)
 
 
+[Back to the top](#table-of-contents)
+
+## Future feature
+Due to lack of time, this project was created as an MVP and there are many features left that were not included in the project. In the future, for the convenience of the user, you need to add the following features:
+* return arrow to the top,
+*in the user's profile, add a section with information about purchased subscriptions,
+* page with information about the trainer, specialty and certificates
+* give the coach the opportunity to edit the schedule of their classes
 
 
+## MARKETING and SEO
+
+Marketing strategy and SEO are very important parts of a B2C e-commerce business. To do this, the site has integrated a newsletter subscription form and created a Facebook business page to attract new customers to the site.
+<details>
+<summary>Facebook page</summary>
+
+![Facebook  page](assets/marketing/facebook.png)
+
+</details>
+<br />
+
+The newsletter subscription is linked to Mailchimp, allowing you to effectively manage your marketing campaigns and your subscribers.
+
+<details>
+<summary>Mailchimp dashboard</summary>
+
+![](assets/marketing/mailchimp-audience.png)
+
+</details>
+
+In order to promote the site and improve its finding by search engines, I added metadata (description, keywords) and a title in the head of the base.html page.
+
+### sitemap.xml
+For better processing of the site by search engines and their understanding of the structure of the site in the root folder of the project
+added a sitemap file with a list of important URLs,
+
+### robots.txt
+The robots.txt file is needed to tell search engines which files should not be crawled and should not be indexed.
 
 
+[Back to the top](#table-of-contents)
 
 ## Technologies Used
 
@@ -188,3 +231,25 @@ Logout page: Logging out of the account is done through the menu, after which th
 - [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/open/): was used to debug the website.
 - [Github Projects and Kanban board](https://github.com/users/LarisaLG/projects/18/views/1) was used to track the progress of the project in general and of every application in the project.
 - [Free grammar checker](https://www.zoho.com/writer/free-grammar-checker.html)
+
+## Credits
+### Code
+
+
+The article [**Using SCSS/SASS with Django3**](https://medium.com/@taylorberukoff/using-scss-sass-with-django3-d0930936610c) helped me set up SCSS in my project.
+
+The code from the CI walthrough project Boutique Ado project was also used to create this project.
+
+### Content
+
+  - [**Media**](#media)
+  - [**Inspiration**](#inspiration)
+
+
+## Acknowledgments
+
+To cohort facilitator Kasia Bogucka for constant support and faith in success under any circumstances.
+Tutor support group Code Institute. Irene Neville who kept me in good shape and didn't let me stop.
+
+
+[Back to the top](#table-of-contents)
