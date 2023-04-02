@@ -158,7 +158,8 @@ Due to lack of time, this project was created as an MVP and there are many featu
 * return arrow to the top,
 *in the user's profile, add a section with information about purchased subscriptions,
 * page with information about the trainer, specialty and certificates
-* give the coach the opportunity to edit the schedule of their classes
+* give the coach the opportunity to edit the schedule of their classes,
+* create FAQ page
 
 
 ## MARKETING and SEO
@@ -235,16 +236,21 @@ The robots.txt file is needed to tell search engines which files should not be c
 ## Credits
 ### Code
 
-
 The article [**Using SCSS/SASS with Django3**](https://medium.com/@taylorberukoff/using-scss-sass-with-django3-d0930936610c) helped me set up SCSS in my project.
 
 The code from the CI walthrough project Boutique Ado project was also used to create this project.
 
 ### Content
+Description of workouts and trainigs taken from [Wikipedia](https://www.wikipedia.org/).
+Texts for clases description were borrowed from site [Energiefitness](https://www.energiefitness.com/classes) 
 
-  - [**Media**](#media)
-  - [**Inspiration**](#inspiration)
+### Media
+Most of images were used from [Colorlib](https://colorlib.com) template.
 
+[Profile](https://www.flaticon.com/free-icons/sportsman) default avatar and [trainer](https://www.flaticon.com/free-icons/gym) default avatar was taken from Flaticon.com site.
+
+### Inspiration
+[Goldstonefitness](https://www.goldstonefitness.ie/pricing/) site became an example for project membership page.
 
 ## Acknowledgments
 
