@@ -15,6 +15,8 @@ README Table Content
   - [**Contacts Page**](#contacts-page)
   - [**Login Page**](#login-page)
   - [**Logout Page**](#logout-page)
+- [**Future feature**](#future-features)
+
 - [**Stripe Payments**](#stripe-payments)
 - [**Marketing and SEO**](#marketing-seo)
 - [**Facebook Page**](#facebook-page)
@@ -150,6 +152,11 @@ The Login page contains a form with fields for entering userneme or email, name,
 Logout page: Logging out of the account is done through the menu, after which the user is redirected to the logout page where he must confirm his desire to log out of the account. After a successful logout, the user is returned to the home page and receives a message at the top of the screen.
 ![Logout page](assets/features/logout.png)
 
+### 404 Page
+A 404 page  is the page the users see when they try to reach a non-existent page on the site. It’s the page the server displays when it can’t find the URL requested by the customer.
+The 404 page to ensure that users are redirected back to relevant content on the site.
+![404 page](assets/features/404.png)
+
 
 [Back to the top](#table-of-contents)
 
@@ -159,7 +166,38 @@ Due to lack of time, this project was created as an MVP and there are many featu
 *in the user's profile, add a section with information about purchased subscriptions,
 * page with information about the trainer, specialty and certificates
 * give the coach the opportunity to edit the schedule of their classes,
-* create FAQ page
+* create FAQ page.
+
+
+## Stripe Payments
+To make payments for services and receive payments, the Stripe payment system was integrated on the site.
+<details>
+<summary>Payment successfully sent</summary>
+
+![](assets/stripe/payment-completed.jpg)
+
+</details>
+<br />
+
+<details>
+<summary>Stripe payment dashboard</summary>
+
+![](assets/stripe/stripe-payment-dashboard.jpg)
+
+</details>
+<br />
+
+### Bug confirmation of successful payment 
+Error displaying confirmation of successful payment for the user due to a time limit remained uncorrected.
+<details>
+<summary>payment success page error</summary>
+
+![](assets/stripe/stripe-payment-dashboard.png)
+
+</details>
+<br />
+
+[Back to the top](#table-of-contents)
 
 
 ## MARKETING and SEO
