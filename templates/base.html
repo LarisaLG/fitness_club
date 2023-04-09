@@ -185,6 +185,25 @@
     }, 2000);
     $("#copyright").text(new Date().getFullYear());
   </script>
+
+  <!-- Сode https://www.youtube.com/watch?v=qh2iHLD9aV4 guide -->
+  <!-- button back to top -->
+
+  <script type="text/javascript">
+  $('.back-to-top').click(function () {
+  $('body,html').animate({ scrollTop: 0}, 800);
+  });
+
+  $(window).scroll(function() {
+  let scrolled = $(window).scrollTop(); 
+
+  if(scrolled > 350) {
+  $('.back-to-top').addClass('active');
+  } else {
+  $('.back-to-top').removeClass('active');
+  }
+  });
+  </script>
   {% endblock %}
 
 </body>

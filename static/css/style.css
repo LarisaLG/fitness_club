@@ -930,6 +930,35 @@ ol {
   color: #6e6e6e;
 }
 
+.btt-button {
+  background: #f34e3a;
+  border-radius: 50%;
+  position: fixed;
+  bottom: -50px;
+  padding: 10px 12px;
+  right: 25px;
+  z-index: 99;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.back-to-top svg {
+  fill: #ffffff;
+}
+
+.btt-button.active {
+  bottom: 70px;
+  transition: 0.3s all;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+  cursor: pointer;
+}
+
+
+
 
 /*---------------------
   Mailchimp form
@@ -1411,6 +1440,10 @@ ol {
   .services-items .single-service-item {
     width: 100%;
     margin-right: 0;
+  }
+
+  .btt-button {
+    transform: scale(0.75);
   }
 
   .map-location .map-widget {
